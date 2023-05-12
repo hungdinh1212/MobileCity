@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin</title>
+
+    <link href="../Bootstrap + jquery/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <script src="../Bootstrap + jquery/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/thongtinsanpham.css">
+    <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../Bootstrap + jquery/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <script src="../Bootstrap + jquery/jquery/jquery.js"></script>
+    <script src="../Bootstrap + jquery/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+    <link href="https://vinalnk.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-header-color menutren">
+            <div class="container" style="margin-top: -11px;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="trangChu.html">
+                                <img src="https://vinalnk.com/uploads/2022/06/vinalnk-logo.png"
+                                    style="height: 40px; width: 100%;"></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto" style="margin-left: 30px;">
+                        <li class="nav-item" style="position: relative;">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input size="50" class="form-control mr-sm-2" type="search"
+                                    placeholder="Bạn muốn tìm gì..." aria-label="Search">
+                                <button style="top: 10px; position: absolute; left: 380px; border: none;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="con_header_item">
+                        <i class="fa-solid fa-phone" style="color: #e3e7ed; margin-top: 0px ;"></i>
+                        <span><a href="">0337850724</a> </span>
+                    </div>
+                    <div class="con_header_item">
+                        <i class="fa-solid fa-truck-fast" style="color: #f5f5f5; margin: 10px 10px 0px 0px;"></i>
+                        <span><a href="">Tra cứu đơn hàng</a> </span>
+                    </div>
+                    <div class="shopping btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#cart-offcanvas"
+                        onclick="updateCartUI()"
+                        style="background-color: #d80003; border-color: #860c0e; height: 51px;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-quantity">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div id="cart-offcanvas" class="offcanvas offcanvas-end">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-danger">Giỏ hàng</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        </div>
+        <button class="btn btn-danger">Thanh Toán Ngay</button>
+    </div>
+    <div class="container">
+        <!-- Phần link  -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="breadcrumbs-block" style="font-size: 13px;">
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="">
+                                <i style="color:red;" class="fa fa-home" aria-hidden="true"></i>
+                                <span><a href="trangChu.html">Trang chủ</a></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-angle-right fa-sm"></i>
+                                <a href="DanhSachPhuKien.html">Phụ kiện</a>
+                                <i class="fa fa-angle-right fa-sm"></i>
+                                <a href="DanhSachPhuKien.html">Tai nghe</a>
+                                <i class="fa fa-angle-right fa-sm"></i>
+                                <span class="item_name"> Tai nghe AirPods 2 Wireless charge Apple MRXJ2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Phần tiêu đề sản phẩm -->
+        <section class="title-details-phone" style="margin-top:20px">
+            <div class="container">
+                <div class="title-details-phone-content default" style="padding:10px;">
+                    <div class="name-product-details default">
+                        <div class="name-product-details-name name_product">
+
+                            <h1 class="name_product name"> </h1>
+                        </div>
+                        <div class="name-product-details-compare">
+                            <i class="fa icon-compare"></i>
+                            <span style="color:red;font-size: 12px;">So sánh</span>
+
+                        </div>
+                    </div>
+                    <div class="show-vote-share" style="width: 354px;">
+                        <div class="show-vote-share__vote">
+                            <div class="star" style="font-size: 14px;">
+                                <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                <i class="fa fa-star star-nomarl" aria-hidden="true"></i>
+                            </div>
+                            <div class="text">1 đánh giá</div>
+
+                        </div>
+                        <div class="show-vote-share__like">
+                            <div class="like"><i class="fa fa-thumbs-up"></i>Thích 5</div>
+                        </div>
+                        <div class="show-vote-share__share">
+                            <div class="share">Chia sẻ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Phần thông tin chi tiết  -->
+        <section class="default detail-phone">
+            <div class="container">
+                <div class="detail-phone_content">
+                    <!-- Phần bên trái -->
+                    <div class="detail-phone_content_left">
+                        <!-- Phần hình ảnh lớn -->
+                        <div class="box_slide_image product_img">
+                            <img src="" alt="Điện thoại iPhone 14 Pro Max 128GB">
+                        </div>
+                        <div class="box-text ">
+                            <div class="box-text__content wrap" style="text-align: center;">
+                                <span>Xem tất cả điểm nổi bật</span> (1)
+                            </div>
+                        </div>
+                        <div class="box-slide-image__content-list wrap">
+                            <div class="list-pointlight">
+                                <div class="item-pointlight">
+                                    <div class="item-point">
+                                        <div class="image-icon product_img">
+                                            <img class="image " src="">
+                                        </div>
+                                        <div class="text">
+                                            <p class="product_color"></p>
+                                        </div>
+                                    </div>
+                                    <div class="item-point">
+                                        <div class="image-icon">
+                                            <div class="icon icondetail-thongso"><i class="fa-brands fa-youtube"
+                                                    style="color: #cbd0d7;"></i></div>
+                                        </div>
+                                        <div class="text">
+                                            <p>Thông số <br>kĩ thuật</p>
+                                        </div>
+                                    </div>
+                                    <div class="item-point">
+                                        <div class="image-icon">
+                                            <div class="icon icondetail-360do"><i class="fa-solid fa-box"
+                                                    style="color: #b8bdc6;"></i></div>
+                                        </div>
+                                        <div class="text">
+                                            <p>Hình 360<br> độ</p>
+                                        </div>
+                                    </div>
+                                    <div class="item-point">
+                                        <div class="image-icon">
+                                            <div class="icon icondetail-danhgia"><i class="fa-solid fa-newspaper"
+                                                    style="color: #b9bcc0;"></i></div>
+                                        </div>
+                                        <div class="text">
+                                            <p>Bài viết<br> đánh giá</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Phần chính sách -->
+                        <div class="default warranty-policy">
+                            <div class="warranty-policy__content wrap ">
+                                <div class="item-warranty">
+                                    <div class="item-warranty__image">
+                                        <div class="image-icon">
+                                            <img class="policy_img"
+                                                src="https://vinalnk.com/uploads/2022/02/doi-tra.jpg"
+                                                alt="Bảo hành tại Vinalnk">
+                                        </div>
+                                    </div>
+                                    <span class="item-warranty__text">Bảo hành có cam kết 12 tháng Apple</span>
+                                </div>
+                                <div class="item-warranty">
+                                    <div class="item-warranty__image">
+                                        <div class="image-icon">
+                                            <img class="policy_img" src="https://vinalnk.com/uploads/2022/02/unbox.jpg"
+                                                alt="Bảo hành tại Vinalnk">
+                                        </div>
+                                    </div>
+                                    <div class="item-warranty__text">Trong hộp có: Tai nghe</div>
+                                </div>
+                                <div class="item-warranty">
+                                    <div class="item-warranty__image">
+                                        <div class="image-icon">
+                                            <img class="policy_img"
+                                                src="https://vinalnk.com/uploads/2022/02/bao-hanh.jpg"
+                                                alt="Bảo hành tại Vinalnk">
+                                        </div>
+                                    </div>
+                                    <div class="item-warranty__text">Miễn phí giao hàng tận nhà</div>
+                                </div>
+                                <div class="item-warranty">
+                                    <div class="item-warranty__image">
+                                        <div class="image-icon">
+                                            <img class="policy_img"
+                                                src="https://vinalnk.com/uploads/2022/02/chat-luong-sp.jpg"
+                                                alt="Bảo hành tại Vinalnk">
+                                        </div>
+                                    </div>
+                                    <div class="item-warranty__text">Cam kết hàng chính hãng Apple</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Phần bài viết sản phẩm -->
+                        <div class="wrap default">
+                            <div class="wrap default desc-cate margin-top" id="desc-cate">
+
+                                <div class="desc-cate__content wrap css-content">
+                                    <h3 class="title_1"></h3>
+                                    <p class="detail_1"></p>
+                                    <img class="img_1" src="" alt="" style="width: 100%;">
+                                    <h3 class="title_2"></h3>
+                                    <p class="detail_2"></p>
+                                    <img class="img_2" src="" alt="" style="width: 100%;">
+                                    <h3 class="title_3"></h3>
+                                    <p class="detail_3"></p>
+                                    <img class="img_3" src="" alt="" style="width: 100%;">
+
+                                </div>
+                                <div class="more-cate wrap default">
+                                    <div class="more-cate__button wrap">
+                                        <a href="javascript:;" data-load_desc="1" data-bs-toggle="collapse"
+                                            data-bs-target="#demo">Xem thêm<i class="fa fa-angle-right"
+                                                aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="box-comments wrap default">
+                                    <section class="wrap defaul box-review box-shadow">
+                                        <div class="container">
+                                            <div class="box-review__title wrap default">
+                                                <h2 class="name">Đánh giá &amp; nhận xét Điện thoại iPhone 14 Pro Max
+                                                    128GB
+                                                </h2>
+                                            </div>
+                                            <div class="box-review__show wrap default box-shadow">
+                                                <div class="view-general">
+                                                    <div class="count-vote">5/5</div>
+                                                    <div class="vote-star">
+                                                        <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                                        <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                                        <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                                        <i class="fa fa-star star-gold" aria-hidden="true"></i>
+                                                        <i class="fa fa-star star-normal" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="note">
+                                                        <p>0 đánh giá &amp; nhận xét</p>
+                                                    </div>
+                                                </div>
+                                                <div class="chart-star">
+                                                    <div class="box-statistical">
+                                                        <div class="item-statistical">
+                                                            <p class="number-star">
+                                                                <strong>5</strong>&nbsp;<i
+                                                                    class="fa fa-star star-gold checked"></i>
+                                                            </p>
+                                                            <div class="timeline-star">
+                                                                <div class="timing" style="width: 0%;"></div>
+                                                            </div>
+                                                            <p class="number-percent">0 đánh giá</p>
+                                                        </div>
+                                                        <div class="item-statistical">
+                                                            <p class="number-star">
+                                                                <strong>4</strong>&nbsp;<i
+                                                                    class="fa fa-star star-gold checked"></i>
+                                                            </p>
+                                                            <div class="timeline-star">
+                                                                <div class="timing" style="width: 0%;"></div>
+                                                            </div>
+                                                            <p class="number-percent">0 đánh giá</p>
+                                                        </div>
+                                                        <div class="item-statistical">
+                                                            <p class="number-star">
+                                                                <strong>3</strong>&nbsp;<i
+                                                                    class="fa fa-star star-gold checked"></i>
+                                                            </p>
+                                                            <div class="timeline-star">
+                                                                <div class="timing" style="width: 0%;"></div>
+                                                            </div>
+                                                            <p class="number-percent">0 đánh giá</p>
+                                                        </div>
+                                                        <div class="item-statistical">
+                                                            <p class="number-star">
+                                                                <strong>2</strong>&nbsp;<i
+                                                                    class="fa fa-star star-gold checked"></i>
+                                                            </p>
+                                                            <div class="timeline-star">
+                                                                <div class="timing" style="width: 0%;"></div>
+                                                            </div>
+                                                            <p class="number-percent">0 đánh giá</p>
+                                                        </div>
+                                                        <div class="item-statistical">
+                                                            <p class="number-star">
+                                                                <strong>1</strong>&nbsp;<i
+                                                                    class="fa fa-star star-gold checked"></i>
+                                                            </p>
+                                                            <div class="timeline-star">
+                                                                <div class="timing" style="width: 0%;"></div>
+                                                            </div>
+                                                            <p class="number-percent">0 đánh giá</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="please-rate wrap default">
+                                                <div class="please-rate__content" type="button" class="btn btn-primary"
+                                                    data-bs-toggle="modal" data-bs-target="#myModal1">
+                                                    <p>Bạn đánh giá sao sản phẩm này</p>
+                                                    <a href="javscript:void(0)" class="btn-vote" data-vote_star="117"
+                                                        data-type="phone">Đánh giá ngay</a>
+                                                </div>
+                                            </div>
+                                            <div class="box-review__list list-review-product wrap default">
+
+                                            </div>
+
+                                        </div>
+                                    </section>
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModal1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <!-- Modal Header -->
+                                                <div class="modal-header" style="color:red">
+                                                    <div class="popup-vote-star__title">
+                                                        <h4>Đánh giá và nhận xét sản phẩm</h4>
+                                                    </div>
+                                                    <button type="button" class="btn-close"
+                                                        data-bs-dismiss="modal"></button>
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <div class="popup-content">
+                                                            <div class="popup-vote-star__content review">
+                                                                <form action="" method="">
+                                                                    <input type="hidden" name="_token"
+                                                                        value="Q5cQgKrLIjSFUR5tcu3l2j1SXANJ2zXKi0EPaask">
+                                                                    <div class="input">
+                                                                        <input type="text" class="form-name" name="name"
+                                                                            placeholder="Họ và tên">
+                                                                        <input type="text" class="form-phone"
+                                                                            name="phone" placeholder="Số điện thoại">
+                                                                        <div class="box-upload-file">
+                                                                            <div class="cps-group-input">
+                                                                                <input id="uploadFile" disabled=""
+                                                                                    placeholder="Hình ảnh thực tế"
+                                                                                    class="cps-input mb-0">
+                                                                                <div class="btn-browse">
+                                                                                    <img
+                                                                                        src="https://vinalnk.com/assets/img/icon/file.svg">&nbsp;Thêm
+                                                                                    ảnh
+                                                                                    <input type="file"
+                                                                                        name="uploadImages[]"
+                                                                                        id="uploadImages"
+                                                                                        multiple="multiple"
+                                                                                        accept="image/png, image/jpeg"
+                                                                                        class="cps-upload file_attrack file-browser">
+                                                                                    <p class="preview-file"
+                                                                                        style="opacity: 0"
+                                                                                        data-url_file="">
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <textarea class="form-content" name="content"
+                                                                            placeholder="Xin mời chia sẻ một số cảm nhận về sản phẩm..."></textarea>
+                                                                    </div>
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <div class="vote">
+                                                        <div class="vote-title wrap">
+                                                            <p>Bạn cảm thấy sản phẩm như thế nào?</p>
+                                                        </div>
+                                                        <input type="hidden" name="rating" id="rating">
+                                                        <div class="vote-content rating-star wrap">
+                                                            <label class="rate"><i class="fa fa-star star_1"
+                                                                    data-value_star="1"></i> <span>Rất
+                                                                    tệ</span></label>
+                                                            <label class="rate"><i class="fa fa-star star_2"
+                                                                    data-value_star="2"></i>
+                                                                <span>Tệ</span></label>
+                                                            <label class="rate"><i class="fa fa-star star_3"
+                                                                    data-value_star="3"></i> <span>Bình
+                                                                    thường</span></label>
+                                                            <label class="rate"><i class="fa fa-star star_4"
+                                                                    data-value_star="4"></i>
+                                                                <span>Tốt</span></label>
+                                                            <label class="rate"><i class="fa fa-star star_5"
+                                                                    data-value_star="5"></i> <span>Rất
+                                                                    tốt</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-form">
+                                                        <div class="send-vote" data-add_preview="">Gửi đánh
+                                                            giá</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Phần bình luận hỏi và đáp -->
+                                    <section class="comment comment_117 wrap default box-shadow" data-type="phone"
+                                        data-type_id="117" id="comment">
+                                        <div class="container">
+                                            <div class="comment-form-box wrap default">
+                                                <div class="comment-title wrap">
+                                                    <p class="title">Hỏi và đáp</p>
+                                                </div>
+                                                <div class="comment-input content_comment wrap default">
+                                                    <div class="textarea box-shadow">
+                                                        <textarea name="content_comment" class=""
+                                                            placeholder="Xin mời để lại câu hỏi, Vinalnk sẽ trả lời ngay trong 1h, các câu hỏi sau 22h - 8h sẽ được trả lời vào sáng hôm sau."></textarea>
+                                                    </div>
+                                                    <a href="javascript:;" class="btn-send-comment"
+                                                        data-popup_form_comment="">
+                                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                                        Gửi
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="popup popup-information-comment" data-id_type="" data-type_product=""
+                                        data-parent_id="" id="get-info-comment" style="display: none;">
+                                        <div class="popup-content">
+                                            <div class="popup-information-comment__title wrap">
+                                                <p class="title" data-info="">Thông tin người gửi</p>
+                                                <div class="close"><i class="fa fa-times" aria-hidden="true"></i> Đóng
+                                                </div>
+                                            </div>
+                                            <div class="popup-information-comment__input wrap">
+                                                <form>
+                                                    <input type="hidden" name="_token"
+                                                        value="Q5cQgKrLIjSFUR5tcu3l2j1SXANJ2zXKi0EPaask"> <input
+                                                        type="hidden" name="content" class="content-comment">
+                                                    <div class="input">
+                                                        <input type="text" name="name" placeholder="Họ tên (Bắt buộc)"
+                                                            class="form-name">
+                                                        <input type="text" name="phone" placeholder="Số điện thoại"
+                                                            class="form-phone">
+                                                        <input type="text" name="email"
+                                                            placeholder="Email (Để nhận phẩn hồi qua emial)"
+                                                            class="form-email">
+                                                    </div>
+                                                    <div class="button-form">
+                                                        <div class="submit" data-add_comment="">Gửi bình luận</div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Phần bên phải-->
+                    <div class="detail-phone__content-right">
+                        <!-- Phần Giá -->
+                        <div class="box-phone-price wrap default">
+                            <span class="price"></span><sup
+                                style="font-weight: 700; font-size: 14px;color: #D80003; top: 0px;">đ</sup>
+                            <p class="discount_price"></p><sup
+                                style="font-weight: bold;font-size: 11px; color: grey;top: 6px;">đ</sup>
+                        </div>
+
+                        <!-- Phần color -->
+                        <div class="box-color-phone wrap default">
+                            <div class="box-color-phone__title wrap">Màu sắc:</div>
+                            <div class="box-color-phone__list wrap default">
+                                <div class="item-color-phone"
+                                    data-color_thumbnail="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-tim-vinalnk.jpg">
+                                    <div class="item-color-phone__image product_img">
+                                        <div class="image"><img
+                                                src="https://img.websosanh.vn/v2/users/wss/images/tai-nghe-khong-day-apple/e3ea05434cb44.jpg?compress=85&width=220"
+                                                alt="Tím"></div>
+                                    </div>
+                                    <div class="item-color-phone__name">
+                                        <p class="name"><i class="product_color"></i> <i class="price"></i><sup>đ</sup>
+                                        </p>
+                                    </div>
+                                    <i class="fa fa-check-square"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Phần Khuyến Mãi -->
+                        <div class="box-info-sale wrap default" style="border: 1px solid #FEE2E2">
+                            <div class="box-info-sale__title wrap" style="background: #FEE2E2">
+                                <p class="" style="color: #D70018">Khuyến mãi</p>
+                            </div>
+                            <div class="box-info-sale__content wrap">
+                                <ul class="wrap default">
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #288ad6"><span>1</span></div>
+                                        <div class="text">Giảm thêm 50.000đ khi đặt hàng Online
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #288ad6"><span>2</span></div>
+                                        <div class="text">Góp 0% qua thẻ tín dụng hoặc công ty tài chính Home Credit
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #288ad6"><span>3</span></div>
+                                        <div class="text">Giảm giá 200.000đ khi tham gia thu cũ đổi mới
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #288ad6"><span>4</span></div>
+                                        <div class="text">Hỗ trợ thu cũ đổi mới iPhone chính hãng
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #288ad6"><span>5</span></div>
+                                        <div class="text">Dùng thử 5 ngày miễn phí khi mua Online</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Phần Mua Hàng Thêm Giỏ Hàng Trả Góp Qua Thẻ -->
+                        <div class="box-buy-cart wrap default">
+                            <div type="button" data-bs-toggle="modal" data-bs-target="#myModal2"
+                                class="btn-buy-now wrap">
+                                <div class="text-uppercase">Mua ngay</div>
+                                <p>(Giao tận nơi hoặc lấy tại cửa hàng)</p>
+                            </div>
+                            <div class="installment">
+                                <div class="btn-add-cart" onclick="addToCart()">
+                                    <input type="hidden" class="qty_product" name="qty" value="1">
+                                    <div class="text-uppercase">Thêm vào giỏ hàng</div>
+                                    <p>(Nhiều quà tặng hấp dẫn)</p>
+
+                                </div>
+                                <div class="btn-installment">
+                                    <a href="#" class="credit_link">
+                                        <div class="text-uppercase">Trả góp qua thẻ</div>
+                                        <p>(Visa, Master Card, JCB)</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Modal Mua Hàng-->
+                        <div class="modal fade" id="myModal2">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <div class="name-product">Điện thoại iPhone 14 Pro Max 256GB</div><br>
+                                        <div class="price" style="color:red"></div><sup
+                                            style="margin-left: -14px;color: #ff0000;">đ</sup>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="box-color-phone wrap default">
+                                            <div class="box-color-phone__title wrap">Màu sắc:</div>
+                                            <div class="box-color-phone__list wrap default">
+
+                                                <div class="item-color-phone  " data-qty="200" data-color_default="0"
+                                                    data-color="#41403e" data-color_price="0"
+                                                    data-color_thumbnail="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-den-vinalnk.jpg"
+                                                    data-color_check="200" data-price_cost="36990000">
+                                                    <div class="item-color-phone__image">
+                                                        <div class="image"><img
+                                                                src="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-den-vinalnk.jpg"
+                                                                alt="Đen"></div>
+                                                    </div>
+                                                    <div class="item-color-phone__name">
+                                                        <p class="name">Đen 36,990,000<sup>đ</sup> </p>
+
+                                                    </div>
+                                                    <i class="fa fa-check-square"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="qty-product wrap">
+                                            <div class="qty-product__text">Chọn số lượng:</div>
+                                            <div class="qty-product__input">
+                                                <div class="choosenumber popup-number">
+                                                    <div class="minus" data-qty_popup="minus"><i></i></div>
+                                                    <div class="number">1</div>
+                                                    <div class="plus" data-qty_popup="plus"><i></i><i></i></div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="promotion-product wrap">
+                                            <div class="btn-show-promotion">Xem tất cả khuyến mại <i
+                                                    class="fa fa-caret-down" aria-hidden="true"></i></div>
+                                            <div class="list-promotion-product" style="display: none;">
+                                                <div class="list-promotion">
+                                                    <div class="promotion-main wrap default">
+                                                        <div class="promotion-main__title wrap">
+                                                            <p>Khuyến mại</p>
+                                                        </div>
+                                                        <div class="promotion-main__content wrap">
+                                                            <ul class="wrap default">
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <div class="text">Giảm thêm 50.000đ khi đặt hàng
+                                                                        Online
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <div class="text">Góp 0% qua thẻ tín dụng hoặc công
+                                                                        ty
+                                                                        tài chính Home Credit
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>3</span>
+                                                                    </div>
+                                                                    <div class="text">Giảm giá 200.000đ khi tham gia thu
+                                                                        cũ
+                                                                        đổi mới
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>4</span>
+                                                                    </div>
+                                                                    <div class="text">Hỗ trợ thu cũ đổi mới iPhone chính
+                                                                        hãng
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>5</span>
+                                                                    </div>
+                                                                    <div class="text">Dùng thử 5 ngày miễn phí khi mua
+                                                                        Online</div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="promotion-main wrap default">
+                                                        <div class="promotion-main__title wrap">
+                                                            <p>Ưu đãi thêm</p>
+                                                        </div>
+                                                        <div class="promotion-main__content wrap">
+                                                            <ul class="wrap default">
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>1</span>
+                                                                    </div>
+                                                                    <div class="text">Giảm thêm 100.000đ với khách đã
+                                                                        mua
+                                                                        tại Vinalnk
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                    <div class="text">Góp 0% qua thẻ tín dụng hoặc công
+                                                                        ty
+                                                                        tài chính
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>3</span>
+                                                                    </div>
+                                                                    <div class="text">Tặng 100.000đ khi mua tai nghe
+                                                                        AirPods
+                                                                    </div>
+                                                                </li>
+                                                                <li class="wrap default">
+                                                                    <div class="stt" style="background: #288ad6">
+                                                                        <span>4</span>
+                                                                    </div>
+                                                                    <div class="text">Nhận mã giảm giá khi mua hàng
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <div class="button-buy wrap">
+                                            <div class="btn-buy">Mua Ngay</div>
+                                        </div>
+                                    </div>
+                                    <div class="view-cart">
+                                        <a href="https://vinalnk.com/gio-hang">Xem giỏ hàng</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Phần hotline đặt hàng -->
+                        <div class="box-call-order wrap default">
+                            <div class="box-call-order__content wrap">
+                                <p>Hotline gọi đặt hàng
+                                    <span> 0386 879 779</span>
+                                    (7:30 - 22:00)
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Phần thông tin thêm -->
+                        <div class="box-info-sale wrap default" style="border: 1px solid #D1D5DB">
+                            <div class="box-info-sale__title wrap" style="background: #D1D5DB">
+                                <p class="" style="color: #444444">Ưu đãi thêm</p>
+                            </div>
+                            <div class="box-info-sale__content wrap">
+                                <ul class="wrap default">
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #f32d2f"><span>1</span></div>
+                                        <div class="text">Giảm thêm 100.000đ với khách đã mua tại Vinalnk
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #f32d2f"><span>2</span></div>
+                                        <div class="text">Góp 0% qua thẻ tín dụng hoặc công ty tài chính
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #f32d2f"><span>3</span></div>
+                                        <div class="text">Tặng 100.000đ khi mua tai nghe AirPods
+                                        </div>
+                                    </li>
+                                    <li class="wrap default">
+                                        <div class="stt" style="background: #f32d2f"><span>4</span></div>
+                                        <div class="text">Nhận mã giảm giá khi mua hàng</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Phần thông số kĩ thuật -->
+                        <div class="box-technical-info wrap default">
+                            <div class="box-technical-info__title">Thông số kĩ thuật</div>
+                            <div class="box-technical-info__content wrap">
+                                <div class="parameter wrap">
+                                    <ul class="parameter__list active">
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Thời gian sử dụng tai nghe:</p>
+                                            </div>
+                                            <div class="liright">
+                                                Dùng 5 giờ - Sạc 2 giờ
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Thời gian sử dụng hộp sạc:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Dùng 24 giờ - Sạc 3 giờ</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Cổng sạc:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <ul>
+                                                    <li style="display: list-item;">Lightning</li>
+                                                    <li style="display: list-item;">Sạc không dây</li>
+                                                    <li style="display: list-item;">Sạc MagSafe</li>
+                                                </ul>
+                                                <!-- <p class="comma-1">Đang cập nhật</p> -->
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Công nghệ âm thanh::</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Transparency Mode</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Tương thích:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <ul>
+                                                    <li style="display: list-item;">Android</li>
+                                                    <li style="display: list-item;">iPadOS (iPad)</li>
+                                                    <li style="display: list-item;">MacOS (Macbook)</li>
+                                                    <li style="display: list-item;"> iMac</li>
+                                                    <li style="display: list-item;">IOS</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li -index="0" -prop="0">
+                                            <div class="lileft">
+                                                <p class="lileft-text">Ghi âm:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                        <li -index="0" -prop="0">
+                                            <div class="lileft">
+                                                <p class="lileft-text">Xem phim:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                        <li -index="0">
+                                            <div class="lileft">
+                                                <p class="lileft-text">Nghe nhạc:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Thiết kế:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Chất liệu:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Kích thước, khối lượng:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="lileft">
+                                                <p class="lileft-text">Thời điểm ra mắt:</p>
+                                            </div>
+                                            <div class="liright">
+                                                <p class="comma-1">Đang cập nhật</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-primary btn-detail" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        Xem thêm cấu hình chi tiết <i class="fa fa-angle-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header"
+                                        style=" height: 60px; background-color: white;   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);">
+                                        <h5 class="modal-title" id="exampleModalLabel" style="margin: 28px 0px 13px 40%;
+                                        border-bottom: 4px solid #2d9cdb;
+                                        color: #2d9cdb;
+                                        font-weight: bold;
+                                        height: 46px;
+                              ">Thông Số Kỹ Thuật</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img style="width: 100%;"
+                                            src="https://vinalnk.com/uploads/2022/05/tai-nghe-bluetooth-airpods-2-wireless-charge-mrxj2-micro.jpg"
+                                            alt="">
+                                        <div class="box-technical-info wrap default">
+                                            <div class="box-technical-info__title">Thông số kĩ thuật</div>
+                                            <div class="box-technical-info__content wrap">
+                                                <div class="parameter wrap">
+                                                    <ul class="parameter__list active"
+                                                        style="overflow: inherit; max-height: fit-content;">
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Thời gian sử dụng tai nghe:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                Dùng 5 giờ - Sạc 2 giờ
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Thời gian sử dụng hộp sạc:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">Dùng 24 giờ - Sạc 3 giờ</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Cổng sạc:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <ul>
+                                                                    <li style="display: list-item;">Lightning</li>
+                                                                    <li style="display: list-item;">Sạc không dây</li>
+                                                                    <li style="display: list-item;">Sạc MagSafe</li>
+                                                                </ul>
+                                                                <!-- <p class="comma-1">Đang cập nhật</p> -->
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Công nghệ âm thanh::</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">Transparency Mode</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Tương thích:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <ul>
+                                                                    <li style="display: list-item;">Android</li>
+                                                                    <li style="display: list-item;">iPadOS (iPad)</li>
+                                                                    <li style="display: list-item;">MacOS (Macbook)</li>
+                                                                    <li style="display: list-item;"> iMac</li>
+                                                                    <li style="display: list-item;">IOS</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Tiện ích:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <ul>
+                                                                    <li style="display: list-item;">Chống nước IPX4</li>
+                                                                    <li style="display: list-item;">Chống ồn</li>
+                                                                    <li style="display: list-item;">Có micro thoại</li>
+                                                                    <li style="display: list-item;">Hỗ trợ sạc không dây
+                                                                        Qi</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Kết nối cùng lúc:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">1 thiết bị</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Công nghệ kết nối:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">Bluetooth 5.0</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Điều khiển:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">Cảm ứng chạm</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Phím điều khiển:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <ul>
+                                                                    <li>Bật trợ lí ảo</li>
+                                                                    <li>Chuyển bài hát</li>
+                                                                    <li>Mic thoại</li>
+                                                                    <li>Nghe/nhận cuộc gọi</li>
+                                                                    <li>Phát/dừng chơi nhạc</li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Kích thước:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">Dài 3.09 cm - Rộng 1.18 cm - Cao 2.4
+                                                                    cm</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="lileft">
+                                                                <p class="lileft-text">Sản xuất tại:</p>
+                                                            </div>
+                                                            <div class="liright">
+                                                                <p class="comma-1">Việt Nam / Trung Quốc</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Phần tin tức  -->
+                        <div class="wrap default related-new box-shadow">
+                            <div class="related-new__title wrap">
+                                <h4 class="related-new__title-name">Tin tức liên quan</h4>
+                            </div>
+                            <div class="related-new__content wrap">
+                                <div class="related-new__content-list">
+                                    <div class="item-new-product-sitebar">
+                                        <a
+                                            href="https://vinalnk.com/night-mode-la-gi-cach-chup-anh-night-mode-tren-iphone-tuyet-dep-n32.html">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://vinalnk.com/uploads/2022/01/nightmode-medium.jpg"
+                                                        alt="Night Mode là gì? Cách chụp ảnh Night Mode trên iPhone tuyệt đẹp">
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="info-name">
+                                                    <h3 class="name">Night Mode là gì? Cách chụp ảnh Night Mode trên
+                                                        iPhone
+                                                        tuyệt đẹp</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-new-product-sitebar">
+                                        <a
+                                            href="https://vinalnk.com/slow-motion-la-gi-cach-quay-cham-slow-motion-dep-nhu-chuyen-gia-n33.html">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://vinalnk.com/uploads/2022/01/slow-motion-2-medium.jpg"
+                                                        alt="Slow Motion là gì? Cách quay chậm Slow Motion đẹp như chuyên gia">
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="info-name">
+                                                    <h3 class="name">Slow Motion là gì? Cách quay chậm Slow Motion đẹp
+                                                        như
+                                                        chuyên gia</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-new-product-sitebar">
+                                        <a
+                                            href="https://vinalnk.com/chup-anh-xoa-phong-la-gi-cach-chup-anh-xoa-phong-tren-smartphone-n34.html">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://vinalnk.com/uploads/2022/01/anh-xoa-phong-dep-nhat-medium.jpg"
+                                                        alt="Chụp ảnh xoá phông là gì? Cách chụp ảnh xoá phông trên Smartphone">
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="info-name">
+                                                    <h3 class="name">Chụp ảnh xoá phông là gì? Cách chụp ảnh xoá phông
+                                                        trên
+                                                        Smartphone</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-new-product-sitebar">
+                                        <a
+                                            href="https://vinalnk.com/zoom-quang-hoc-la-gi-nen-dung-zoom-quang-hoc-nao-tren-smartphone-n35.html">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://vinalnk.com/uploads/2022/01/zoom-quang-hoc-11-min-medium.jpg"
+                                                        alt="Zoom quang học là gì? Nên dùng zoom quang học nào trên Smartphone">
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="info-name">
+                                                    <h3 class="name">Zoom quang học là gì? Nên dùng zoom quang học nào
+                                                        trên
+                                                        Smartphone</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-new-product-sitebar">
+                                        <a
+                                            href="https://vinalnk.com/zoom-ky-thuat-so-la-gi-cach-thuc-hoat-dong-cua-zoom-ky-thuat-so-n36.html">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://vinalnk.com/uploads/2022/01/zoom-ky-thuat-so-2-medium.jpg"
+                                                        alt="Zoom kỹ thuật số là gì? Cách thức hoạt động của Zoom kỹ thuật số">
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="info-name">
+                                                    <h3 class="name">Zoom kỹ thuật số là gì? Cách thức hoạt động của
+                                                        Zoom kỹ
+                                                        thuật số</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-new-product-sitebar">
+                                        <a
+                                            href="https://vinalnk.com/panorama-la-gi-huong-dan-chup-panorama-tuyet-dep-bang-smartphone-n37.html">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://vinalnk.com/uploads/2022/01/panorama-min-medium.jpg"
+                                                        alt="Panorama là gì? Hướng dẫn chụp Panorama tuyệt đẹp bằng smartphone">
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="info-name">
+                                                    <h3 class="name">Panorama là gì? Hướng dẫn chụp Panorama tuyệt đẹp
+                                                        bằng
+                                                        smartphone</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="related-new__content-more">
+                                    <div class="see-more wrap box-shadow">
+                                        <a href="https://vinalnk.com/tin-tuc">Xem tất cả bài viết <i
+                                                class="fa fa-chevron-down"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-3">
+                    <h3 class="footer__heading">Tìm cửa hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Tìm cửa hàng gần nhất</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Mua hàng từ xa</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link" style="color: red;">Gặp trực tiếp cửa hàng gần nhất
+                                (Zalo hoặc gọi
+                                điện)</a>
+                        </li>
+                    </ul>
+                    <h3 class="footer__heading">Phương thức thanh toán</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <a href=""><img src="../image/visa-2.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/mastercard.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/atm.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/cirrus.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/momo.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/moca.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/vnpay.png" class="width__img"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="../image/zalopay.png" class="width__img"></a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="grid__column-3">
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <p class="footer-item-link">Kĩ thuật:
+                                <a href="tel:0964437451" class="footer-item-link"><span><b>0964 437 451</b></span></a>
+                                (8h00 - 20h00)
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p class="footer-item-link">Mua hàng:
+                                <a href="tel:0964437451" class="footer-item-link"><span><b>0964 437 451</b></span></a>
+                                (8h00 - 20h00)
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p class="footer-item-link">Khiếu nại:
+                                <a href="tel:0964437451" class="footer-item-link"><span><b>0964 437 451</b></span></a>
+                                (8h00 - 20h00)
+                            </p>
+                        </li>
+                    </ul>
+                    <h3 class="footer__heading">Đối tác dịch vụ bảo hành</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="#" class="footer-item-link">Điện thoại - Phụ kiện</a>
+                            <a href="#"><img src="../image/doi-tac-bao-hanh.png" class="img-service"></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid__column-3">
+                    <ul class="footer-list">
+                        <li>
+                            <a href="" class="footer-item-link">Chính sách mua hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Chính sách bảo hành</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Chính sách thanh toán</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Chính sách giao hàng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Chính sách trả góp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Chính sách đổi trả</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Chính sách bảo mật</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Cảnh báo giả mạo</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item-link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-3">
+                    <ul class="footer-list">
+                        <li>
+                            <a href="" class="footer-item-link">Câu hỏi thường gặp</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Quy chế hoạt động</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Tra cứu đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Đội ngũ kỹ thuật</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Tìm cửa hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Nhà sáng lập</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Tuyển dụng</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-item-link">Giới thiệu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-4">
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Điện thoại</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone Se seris</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone 7 seris</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone 8 series</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone X series</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone 11 series</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone 12 series</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> iPhone 13 series</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> Điện thoai Apple</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> Điện thoại Xiaomi</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> Điện thoại Samsung</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> Điện thoại Oppo</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> Điện thoại Nokia</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href=""> Điện thoại Vivo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-4">
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Máy tính Laptop</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Laptop Macbook</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Laptop Dell</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Laptop Lenovo</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Laptop HP</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Laptop Asus</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="#">Laptop Acer</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-4">
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Phụ kiện - Nhà thông minh</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Dây cáp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Cốc sạc</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Tai nghe</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Chuột máy tính</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Máy in</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Bàn phím</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Camera</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Sạc dự phòng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Balo, túi xách</a>
+                        </li>
+                        <li class="footer-item">
+                            <a class="footer-item-link" href="">Đèn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-content">
+                <p class="copyright-text">© 2005 - 2023 Công ty TNHH Vina LNK. Giấy chứng nhận đăng ký kinh doanh do sở
+                    KH &
+                    ĐT TPHCM cấp ngày 28/09/2020. Địa chỉ: 22/31A Đ. Số 8, Hiệp Bình Phước, Thủ Đức, Thành phố Hồ Chí
+                    Minh
+                    700000</p>
+            </div>
+        </div>
+        <div class="img" style="
+        margin-left: 30%;">
+            <a href=""><img src="../image/tải xuống.png" class="img-bocongthuong"></a>
+            <a href=""><img src="../image/_dmca_premi_badge_4.png" class="dmca"></a>
+        </div>
+    </footer>
+</body>
+<script src="../Bootstrap + jquery/jquery/jquery.js"></script>
+<!-- <script src="../Js/ListProduct.js"></script> -->
+<script>
+    // Lấy thông tin sản phẩm từ local storage
+    document.addEventListener("DOMContentLoaded", function () {
+        const selectedItem = JSON.parse(localStorage.getItem("selectedItem"));
+
+        // Hiển thị thông tin sản phẩm lên trang
+        const productImg = $(".product_img img");
+        const item_name = $(".item_name");
+        const name_product = $(".name_product");
+        const discount_price = $(".discount_price");
+        const product_color = $('.product_color');
+        const nameproduct1 = $('.name-product')
+        const price = $(".price");
+        const title_1 = $(".title_1")
+        const title_2 = $(".title_2")
+        const title_3 = $(".title_3")
+        const detail_1 = $(".detail_1")
+        const detail_2 = $(".detail_2")
+        const detail_3 = $(".detail_3")
+        const img_1 = $(".img_1")
+        const img_2 = $(".img_2")
+        const img_3 = $(".img_3")
+
+        console.log(selectedItem);
+        name_product.text(selectedItem.title);
+        productImg.attr("src", selectedItem.image);
+        item_name.text(selectedItem.title);
+        price.text(selectedItem.price);
+        discount_price.text(selectedItem.discount);
+        // image.attr("src", selectedItem.image);
+        product_color.text(selectedItem.color);
+        nameproduct1.text(selectedItem.title)
+
+        title_1.text(selectedItem.title1)
+        detail_1.text(selectedItem.detail1)
+        img_1.attr("src", selectedItem.image1);
+
+        title_2.text(selectedItem.title2)
+        detail_2.text(selectedItem.detail2)
+        img_2.attr("src", selectedItem.image2);
+
+        title_3.text(selectedItem.title3)
+        detail_3.text(selectedItem.detail3)
+        img_3.attr("src", selectedItem.image3);
+    });
+</script>
+<script>
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    function addToCart() {
+        // Lấy thông tin sản phẩm
+        const priceText = document.querySelector('.price').textContent;
+        const product = {
+            image: document.querySelector('.product_img img').getAttribute('src'),
+            title: document.querySelector('.name_product').textContent,
+
+            price: parseFloat(priceText.replace(/[^\d\.]/g, '')),
+
+        };
+        const existingItemIndex = cartItems.findIndex(item => item.title === product.title);
+
+        if (existingItemIndex !== -1) {
+            // Nếu sản phẩm đã có trong giỏ hàng thì tăng số lượng sản phẩm
+            cartItems[existingItemIndex].quantity++;
+        } else {
+            // Nếu sản phẩm chưa có trong giỏ hàng thì thêm vào mảng
+            product.quantity = 1;
+            cartItems.push(product);
+        }
+        // Lưu danh sách sản phẩm vào local storage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert('Thêm sản phẩm vào giỏ hàng thành công!');
+        // Cập nhật lại giỏ hàng trên giao diện
+        updateCartUI();
+    }
+    function updateCartUI() {
+        const cartList = document.getElementById('cart-list');
+        let cartItemsUI = '';
+
+        // Hiển thị danh sách sản phẩm trong giỏ hàng
+        cartItems.forEach(item => {
+            cartItemsUI += `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.title}">
+        <div class="item-info">
+          <h3>${item.title}</h3>
+          <p>${item.price}</p>
+          <div class="quantity">
+            <button class="quantity-btn minus" data-index="${cartItems.indexOf(item)}">-</button>
+            <span>${item.quantity}</span>
+            <button class="quantity-btn plus" data-index="${cartItems.indexOf(item)}">+</button>
+          </div>
+          <button class="btn btn-danger delete-item" data-index="${cartItems.indexOf(item)}">Xóa</button>
+        </div>
+      </div>
+    `;
+        });
+
+
+        // Hiển thị tổng số lượng và tổng giá trị đơn hàng
+        const cartTotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+        const cartQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+        const cartTotalUI = `
+      <p>Tổng số lượng: ${cartQuantity}</p>
+      <p>Tổng giá trị đơn hàng: ${cartTotal}</p>
+    `;
+
+        // Hiển thị danh sách sản phẩm và tổng giá trị đơn hàng trong offcanvas bootstrap
+        const cartOffcanvas = document.querySelector('#cart-offcanvas .offcanvas-body');
+        cartOffcanvas.innerHTML = cartItemsUI + cartTotalUI;
+    }
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('delete-item')) {
+            const index = event.target.dataset.index;
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCartUI();
+        }
+    });
+
+    // Lấy các phần tử DOM tương ứng
+    const decreaseButtons = document.querySelectorAll('.quantity-btn .minus');
+    const increaseButtons = document.querySelectorAll('.quantity-btn .plus');
+
+    // Thêm xử lý sự kiện cho các nút
+    decreaseButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const index = button.dataset.index;
+            console.log(`Decreasing item at index ${index}`);
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity--;
+            } else {
+                cartItems.splice(index, 1);
+            }
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCartUI();
+        });
+    });
+
+    increaseButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const index = button.dataset.index;
+            console.log(`Increasing item at index ${index}`);
+            cartItems[index].quantity++;
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            updateCartUI();
+        });
+    });
+    function updateCartQuantity() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        const cartQuantity = document.querySelector('.cart-quantity');
+        cartQuantity.textContent = totalItems;
+        updateCartUI();
+    }
+    //Js nhấn nút thêm hiển thị các thông tin chữ
+    const button_XemThem = document.querySelector(".more-cate__button")
+    console.log(button_XemThem);
+    const info_Product = document.querySelector('.desc-cate__content')
+    let flag = true;
+    button_XemThem.onclick = function () {
+        if (flag) {
+            info_Product.style.height = '1800px';
+            info_Product.style.animation = 'example 2s ease 0s 1 normal forwards running';
+            return flag = false;
+        } else {
+            info_Product.style.height = '';
+            return flag = true;
+        }
+    }
+</script>
+
+
+</html>

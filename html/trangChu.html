@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang Chủ</title>
+  <link rel="stylesheet" href="../css/cssChinh.css" />
+  <!-- <link rel="stylesheet" href="../font/fontawesome-free-6.3.0-web/css/all.min.css" /> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="../fontawesome/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+  <link rel="stylesheet" href="../Bootstrap + jquery/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+  <script src="../Bootstrap + jquery/jquery/jquery.js"></script>
+  <script src="../Bootstrap + jquery/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+  <link href="https://vinalnk.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
+
+<script>
+  $(document).ready(function(){
+    var ten = $("#ten");
+    var tbten= $("#erten");
+    function kiemTraTen(){
+    var pattenTen = /^([A-Z]{1}[A-Za-z]*\s)+([A-Z]{1}[A-Za-z]*){1}$/;
+    if(ten.val()==""){
+      tbten.html("Không được rỗng");
+      return false;
+    }
+    if(!pattenTen.test(ten.val())){
+      tbten.html("Tên sai!!!");
+        return false;
+    }
+    tbten.html("(*)");
+    return true;
+  }
+  ten.blur(kiemTraTen);
+
+  var sdt = $("#sdt");
+    var tbsdt= $("#ersdt");
+    function kiemTraSDT(){
+    var pattenSDT = /^(0)\d{9}$/;
+    if(sdt.val()==""){
+      tbsdt.html("Không được rỗng");
+      return false;
+    }
+    if(!pattenSDT.test(sdt.val())){
+      tbsdt.html("SDT sai!!!");
+        return false;
+    }
+    tbsdt.html("(*)");
+    return true;
+  }
+  sdt.blur(kiemTraSDT);
+
+  var email = $("#email");
+    var tbemail= $("#eremail");
+    function kiemTraEmail(){
+    var pattenEmail = /^([a-z]{1})([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    if(email.val()==""){
+      tbemail.html("Không được rỗng");
+      return false;
+    }
+    if(!pattenEmail.test(email.val())){
+      tbemail.html("Email không đúng định dạng!!!");
+        return false;
+    }
+    tbemail.html("(*)");
+    return true;
+  }
+  email.blur(kiemTraEmail);
+
+  var mk = $("#mk");
+    var tbmk= $("#ermk");
+    function kiemTraMK(){
+    var pattenMk = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    if(mk.val()==""){
+      tbmk.html("Không được rỗng");
+      return false;
+    }
+    if(!pattenMk.test(mk.val())){
+      tbmk.html("Tối thiểu tám ký tự, ít nhất một chữ cái viết hoa, một chữ cái viết thường và một số");
+        return false;
+    }
+    tbmk.html("(*)");
+    return true;
+  }
+  mk.blur(kiemTraMK);
+
+  var con_mk = $("#con_mk");
+  var tbcon_mk= $("#ercon_mk");
+  function kiemTraLaiMK(){
+    if(con_mk.val()==""){
+      tbcon_mk.html("Không được rỗng");
+      return false;
+    }
+    if(con_mk.val()!=mk.val()){
+      tbcon_mk.html("Mật khẩu không khớp");
+      return false;
+    }
+    tbcon_mk.html("(*)");
+    return true;
+  }
+  con_mk.blur(kiemTraLaiMK);
+
+  $("#btnDK").click(function(e){
+    if(kiemTraTen() && kiemTraSDT() && kiemTraEmail() && kiemTraMK() && kiemTraLaiMK()){
+      $("#formdangky").modal("hide");
+      $("#myModal").modal("show");
+    }
+  });
+
+  });
+
+  
+</script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="banner">
+      <img src="../image/tet-special-banner-1200x75.gif" alt="" />
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menutren">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="../image/vinalnk-logo.png" alt="" style="height: 30px"
+                  width="120px" /></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i>Tài khoản
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item nutdangnhap text-center mb-2" href="#" data-toggle="modal"
+                  data-target="#formdangnhap">Đăng nhập</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item nutdangky text-center" href="#" data-toggle="modal"
+                  data-target="#formdangky">Đăng ký</a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Bạn muốn tìm gì..."
+                  aria-label="Search" /><i class="fas fa-search"></i>
+              </form>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <button class="btn btn-outline-secondary">
+                <i class="fas fa-shopping-cart"></i>Giỏ hàng
+              </button>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lịch sử đơn hàng</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="btn-container"><span class="btn-top"></span></span>
+                Khuyến mãi tháng mới</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark menuduoi" style="background-color: #cb1c1c">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../html/ListPhone.html" id="navbarDropdown">
+                <i class="fa fa-mobile-screen"></i>Điện thoại
+              </a>
+              <div class="dropdown-content">
+                <a class="dropdown-item" href="#">Iphone</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">SamSung Galaxy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Xiaomi</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Oppo</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Vivo</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">OnePlus</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Realme</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa fa-headphones"></i>Headphone</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="DanhSachPhuKien.html" id="navbarDropdown">
+                <i class="fa fa-plug"></i>Phụ kiện
+              </a>
+              <div class="dropdown-content">
+                <a class="dropdown-item" href="#">Bao da - Ốp lưng</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Sạc dự phòng</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Dán màn hình</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Cáp sạc</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="DanhSachPhuKien.html">Tai nghe</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa fa-mobile-retro"></i>Máy cũ giá rẻ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa fa-sim-card"></i>Sim số, thẻ cào</a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0 tren">
+            <button class="btn btn-outline-secondary" type="submit">
+              <i class="fa-regular fa-credit-card tragop"></i>Trả góp
+            </button>
+            <div class="divider"></div>
+            <button class="btn btn-outline-secondary" type="submit">
+              <i class="fa fa-chevrons-right"></i>
+              Thu cũ, đổi mới
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- slider-->
+    <section class="slider">
+      <div class="container">
+        <div class="slider-content">
+          <div class="slider-content-left">
+            <div class="slider-content-left-top-container">
+              <div class="slider-content-left-top">
+                <a href=""><img src="../image/768x371-xiaomi.png" alt=""></a>
+                <a href=""><img src="../image/768x371-sale.png" alt=""></a>
+                <a href=""><img src="../image/768x371_realme.png" alt=""></a>
+                <a href=""><img src="../image/768x371_samsung.png" alt=""></a>
+                <a href=""><img src="../image/768x371_tuanle.png" alt=""></a>
+              </div>
+              <div class="slider-content-left-top-chevon">
+                <i class="fa fa-chevron-left"></i>
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="slider-content-left-bottom" style="background-color: #e8e8e8;">
+              <li class="active">Xiaomi 13</li>
+              <li>Flash Sale</li>
+              <li>Realme C55</li>
+              <li>SamSung Galaxy</li>
+              <li>Tuần lễ Innosiyie</li>
+            </div>
+          </div>
+
+          <div class="slider-content-right">
+            <li><a href=""><img src="../image/AnyConv.com__banner-thu-cu-doi-moi-28073j.png" alt=""></a></li>
+            <li><a href=""><img src="../image/AnyConv.com__image-28055j.png" alt=""></a></li>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </header>
+
+  <!-- form dang ky khi click vao button tren header-->
+  <div class="modal fade mt-5" id="formdangky" data-backdrop="static" tabindex="-1" aria-labelledby="dangky_tieude"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="tabs d-flex justify-content-around list-unstyled mb-0">
+            <li class="tab tab-dangnhap text-center" data-dismiss="modal" aria-label="Close" data-toggle="modal"
+              data-target="#formdangnhap">
+              <a class="text-decoration-none">Đăng nhập</a>
+              <hr />
+            </li>
+            <li class="tab tab-dangky text-center">
+              <a class="text-decoration-none" style="color: #d02a80">Đăng ký</a>
+              <hr class="hr-dangky" />
+            </li>
+          </ul>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form-signup" class="form-signin mt-2">
+            <div class="form-label-group">
+              <input id="ten" type="text" class="form-control" placeholder="Nhập họ và tên" name="name" required autofocus />
+              <span id="erten" style="color: red;">(*)</span>
+            </div>
+            <div class="form-label-group">
+              <input id="sdt" type="text" class="form-control" placeholder="Nhập số điện thoại" name="phone" required />
+              <span id="ersdt" style="color: red;">(*)</span>
+            </div>
+            <div class="form-label-group">
+              <input id="email" type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email" required />
+              <span id="eremail" style="color: red;">(*)</span>
+            </div>
+            <div class="form-label-group">
+              <input id="mk" type="password" class="form-control" placeholder="Nhập mật khẩu" name="password" required />
+              <span id="ermk" style="color: red;">(*)</span>
+            </div>
+            <div class="form-label-group mb-4">
+              <input id="con_mk" type="password" class="form-control" name="confirm_password" placeholder="Nhập lại mật khẩu"
+                required />
+              <span id="ercon_mk" style="color: red;">(*)</span>
+              </div>
+          </form>
+          <button id="btnDK" class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit"
+              style="background: #f73852">
+              Đăng ký
+            </button>
+        </div>
+        <div class="modal-footer">
+          <p>Bằng việc đăng ký, bạn đã đồng ý với VINALNK về <span> <a href="#" style="color: #cb1c1c !important;"> Điều khoản dịch vụ & Chính
+            sách bảo mật</a></span></p> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- form dang nhap khi click vao button tren header-->
+  <div class="modal fade mt-5" id="formdangnhap" data-backdrop="static" tabindex="-1" aria-labelledby="dangnhap_tieude"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <ul class="tabs d-flex justify-content-around list-unstyled mb-0">
+            <li class="tab tab-dangnhap text-center">
+              <a class="text-decoration-none" style="color: #d02a80">Đăng nhập</a>
+              <hr class="hr-dangnhap" />
+            </li>
+            <li class="tab tab-dangky text-center" data-dismiss="modal" aria-label="Close" data-toggle="modal"
+              data-target="#formdangky">
+              <a class="text-decoration-none">Đăng ký</a>
+              <hr />
+            </li>
+          </ul>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form-signin" class="form-signin mt-2">
+            <div class="form-label-group">
+              <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email" required
+                autofocus />
+            </div>
+
+            <div class="form-label-group">
+              <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required />
+            </div>
+
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" />
+              <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+              <a href="#" class="float-right text-decoration-none" style="color: #030302"><i>Quên mật khẩu</i></a>
+            </div>
+
+            <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit"
+              style="background: #f73852">
+              Đăng nhập
+            </button>
+            <hr class="my-4" />
+            <button onclick="location.href='https:';" class="btn btn-lg btn-google btn-block text-uppercase"
+              type="submit" style="background-color: #f44f40">
+              <i class="fab fa-google mr-2"></i> Đăng nhập bằng Google
+            </button>
+            <button onclick="location.href='https:';" class="btn btn-lg btn-facebook btn-block text-uppercase"
+              type="submit" style="background-color: #678ee0">
+              <i class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="myModalLabel">Đăng ký thành công</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Cảm ơn bạn đã đăng ký tài khoản của chúng tôi!</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  <br><br><br><br><br><br>
+  <main>
+    <!-- Slide Điện Thoại -->
+    </section>
+    <section class="box-product-phone">
+      <div class="container_1">
+        <div class=" title-product">
+          <h2 class="title-name"><a href="ListPhone.html">ĐIỆN THOẠI</a> </h2>
+        </div>
+        <div class="product-phone-content_ip rounded box-shadow">
+          <div class="banner-box">
+          </div>
+          <div class="content-box">
+            <div class="content-box-nav">
+              <div style="display: flex;">
+                <a class="nav-link" href="#">Iphone</a>
+                <a class="nav-link" href="#">Samsung</a>
+                <a class="nav-link" href="#">Xiaomi</a>
+                <a class="nav-link" href="#">Oppo</a>
+                <a class="nav-link" href="#">Nokia</a>
+                <a class="nav-link" href="#">Vivo</a>
+              </div>
+
+              <div class="see-more">
+                <a href="ListPhone.html">Xem thêm <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="content-box-list-container_ip">
+              <div class="content-box-list_ip">
+                <div class="card1 list-item">
+                  <div class="image-product">
+                    <img src="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-den-vinalnk-large.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Tai nghe Bluetooth AirPods Pro Wireless Charge Apple MWP22</h4>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>1 TB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">49.990.000<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card1 list-item item active">
+                  <div class="image-product">
+                    <img src="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-trang-vinalnk-large.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Điện thoại iPhone 14 Pro Max 512GB
+                    </h4>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>512 GB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">43.990.000<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card1 list-item item active">
+                  <div class="image-product">
+                    <img src="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-vang-vinalnk-large.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Điện thoai iphone 14 ProMax 256GB</h4>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>256GB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">36.990.000<sup>đ</sup></p>
+
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card1 list-item item active">
+                  <div class="image-product">
+                    <img src="https://vinalnk.com/uploads/2022/10/iphone-14-pro-max-tim-vinalnk-large.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <div>
+                      <h4 class="card-title" style="font-size:15px">Điện thoai Iphone 14 ProMax 128GB
+                        <br>
+                      </h4>
+                    </div>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>128GB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">33.990.000<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card1 list-item item active">
+                  <div class="image-product">
+                    <img src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/1/4/14_1_9_2_9.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <div>
+                      <h4 class="card-title" style="font-size:15px">Điện thoai Iphone 13 Pro Max 128GB
+                        <br>
+                      </h4>
+                    </div>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>128GB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">23.090.000<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card1 list-item">
+                  <div class="image-product">
+                    <img src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/2/_/2_61_8_2_1_15.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Điện thoai Iphone 13 Pro Max 1TB</h4>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>1 TB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">29.490.000<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card1 list-item">
+                  <div class="image-product">
+                    <img src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/4/_/4_36_3_2_1_11.jpg"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">Điện thoai Iphone 13 Pro Max 512GB</h4>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>Apple
+                      <i class="fa fa-mobile" aria-hidden="true"></i> 6.7
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i>512 GB
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">29.490.000<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="button-leftip button left">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="button-rightip button right">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Phụ Kiện -->
+    <br><br>
+    </section>
+    <section class="box-product-phone">
+      <div class="container_1">
+        <div class=" title-product">
+          <h2 class="title-name"><a href="DanhSachPhuKien.html">TAI NGHE</a></h2>
+        </div>
+        <div class="product-phone-content rounded box-shadow">
+          <div class="banner-box">
+          </div>
+          <div class="content-box">
+            <div class="content-box-nav">
+              <div style="display: flex;">
+                <a class="nav-link" href="#">Cáp Sạc</a>
+                <a class="nav-link" href="#">Cốc Sạc</a>
+                <a class="nav-link" href="#">Tai nghe</a>
+                <a class="nav-link" href="#">Chuột Máy Tính</a>
+              </div>
+              <div class="see-more">
+                <a href="DanhSachPhuKien.html">Xem thêm <i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+            <div class="content-box-list-container">
+              <div class="content-box-list">
+
+              </div>
+              <div class="button-left button left">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="button-right button right">
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+
+      <div class="container">
+        <h4 style="margin: 40px 0px 5px -77px">TIN TỨC - CÔNG NGHỆ</h4>
+        <section class="item_new" style="margin: 3% -7% 3%; display: flex; ">
+          <div class="item_new_1">
+            <div>
+              <a href="https://vinalnk.com/cach-tai-file-nhac-mp3-tu-youtube-n135.html"><img
+                  style="width: 450px; height: 308px;"
+                  src="https://vinalnk.com/uploads/2022/07/cach-tai-file-nhac-mp3-tu-youtube-1-large.JPG" alt=""></a>
+
+            </div>
+            <div class="item_info_1">
+              <div>
+                <p>3 cách tải file youtube nhanh nhất</p>
+              </div>
+              <div>Ngày đăng 3/2/2022</div>
+            </div>
+          </div>
+          <div class="item_new_2" style="display: flex; flex-direction: column; width: 460px;">
+            <div style="display: flex;">
+              <div>
+                <a
+                  href="https://vinalnk.com/huong-dan-cach-quay-man-hinh-iphone-va-ipad-don-gian-va-nhanh-chong-n134.html"><img
+                    src="https://vinalnk.com/uploads/2022/07/cach-chup-man-hinh-may-tinh-laptop-12-large.JPG"
+                    alt=""></a>
+              </div>
+
+              <div><a
+                  href="https://vinalnk.com/huong-dan-cach-quay-man-hinh-iphone-va-ipad-don-gian-va-nhanh-chong-n134.html">Cách
+                  chụp màn hình Macbook, máy tính, laptop đơn giản nhanh và tiện lợi nhất</a></div>
+            </div>
+            <div style="display: flex;">
+              <div>
+                <a href="https://vinalnk.com/cach-chup-man-hinh-macbook-may-tinh-laptop-n133.html"><img
+                    src="https://vinalnk.com/uploads/2022/07/cach-ghep-anh-tren-dien-thoai-1-large.JPG" alt=""></a>
+              </div>
+              <a href="https://vinalnk.com/cach-chup-man-hinh-macbook-may-tinh-laptop-n133.html">Tổng hợp các cách ghép
+                ảnh
+                trên điện thoại đơn giản, chuyên nghiệp</a>
+              <div></div>
+            </div>
+            <div style="display: flex;">
+              <div>
+                <a href="https://vinalnk.com/cach-ghep-anh-tren-dien-thoai-n132.html"><img
+                    src="https://vinalnk.com/uploads/2022/07/cach-kich-hoat-bao-hanh-samsung-4-large.JPG" alt=""></a>
+              </div>
+              <div>
+                <a href="https://vinalnk.com/cach-ghep-anh-tren-dien-thoai-n132.html">Hướng dẫn cách kích hoạt bảo hành
+                  Tivi
+                  Samsung nhanh nhất</a>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <div>
+                <a href="https://vinalnk.com/phan-mem-chinh-sua-anh-tren-may-tinh-mien-phi-n130.html"><img
+                    src="https://vinalnk.com/uploads/2022/07/phan-mem-chinh-sua-anh-tren-may-tinh-5-large.JPG"
+                    alt=""></a>
+              </div>
+              <div>
+                <a href="https://vinalnk.com/phan-mem-chinh-sua-anh-tren-may-tinh-mien-phi-n130.html">Phần mềm chỉnh sửa
+                  ảnh
+                  trên máy tính miễn phí phổ biến hiện nay</a>
+              </div>
+            </div>
+          </div>
+          <div class="item_new_1">
+            <div>
+              <a href="https://vinalnk.com/night-mode-la-gi-cach-chup-anh-night-mode-tren-iphone-tuyet-dep-n32.html"><img
+                  style="width: 450px; height: 308px; border-radius: 25px ;"
+                  src="https://vinalnk.com/uploads/2022/01/nightmode-large.jpg" alt=""></a>
+            </div>
+            <div style="margin-top: 10px;">
+              <div>
+                <p>Night Mode là gì? Cách chụp ảnh Night Mode trên iPhone tuyệt đẹp</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section style="margin: 1% 13% 1%; ">
+      <div>
+        <p style="color: black; font-weight: 500; margin-left: -60px; font-size: 25px;">Điểm mạnh của chúng tôi</p>
+      </div>
+      <div class="flex-container border_information">
+        <div>
+          <a target="" href="">
+            <img src="https://vinalnk.com/assets/img/icon/kinh-nghiem.png" width="80" height="80">
+          </a>
+          <h1 class="font">10 năm kinh nghiệm</h1>
+          <p class="font2">Trong ngành kĩ thuật</p>
+        </div>
+
+        <div>
+          <a target="" href="">
+            <img src="https://vinalnk.com/assets/img/icon/thucu-doimoi.png" width="80" height="80">
+          </a>
+          <h1 class="font">Thu cũ đổi mới</h1>
+          <p class="font2">Thu cũ đổi mới sản phẩm</p>
+        </div>
+        <div>
+          <a target="" href="">
+            <img src="https://vinalnk.com/assets/img/icon/sua-chua.png" width="80" height="80">
+          </a>
+          <h1 class="font">Lắp đặt tại nhà</h1>
+          <p class="font2">Lắp đặt tại nhà miễn phí</p>
+        </div>
+        <div>
+          <a target="" href="">
+            <img src="https://vinalnk.com/assets/img/icon/giao-hang-tan-noi.png" width="80" height="80">
+          </a>
+          <h1 class="font">Giao hàng tận nơi</h1>
+          <p class="font2">Giao hàng tận nơi miễn phí 5km</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="grid">
+        <div class="grid__row">
+          <div class="grid__column-3">
+            <h3 class="footer__heading">Tìm cửa hàng</h3>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Tìm cửa hàng gần nhất</a>
+              </li>
+              <li>
+                <a href="" class="footer-item-link">Mua hàng từ xa</a>
+              </li>
+              <li>
+                <a href="" class="footer-item-link" style="color: red;">Gặp trực tiếp cửa hàng gần nhất (Zalo hoặc gọi
+                  điện)</a>
+              </li>
+            </ul>
+            <h3 class="footer__heading">Phương thức thanh toán</h3>
+            <ul class="footer-list">
+              <li>
+                <a href=""><img src="../image/visa-2.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/mastercard.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/atm.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/cirrus.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/momo.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/moca.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/vnpay.png" class="width__img"></a>
+              </li>
+              <li>
+                <a href=""><img src="../image/zalopay.png" class="width__img"></a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="grid__column-3">
+            <ul class="footer-list">
+              <li class="footer-item">
+                <p class="footer-item-link">Kĩ thuật:
+                  <a href="tel:0964437451" class="footer-item-link"><span><b>0964 437 451</b></span></a> (8h00 - 20h00)
+                </p>
+              </li>
+              <li class="footer-item">
+                <p class="footer-item-link">Mua hàng:
+                  <a href="tel:0964437451" class="footer-item-link"><span><b>0964 437 451</b></span></a> (8h00 - 20h00)
+                </p>
+              </li>
+              <li class="footer-item">
+                <p class="footer-item-link">Khiếu nại:
+                  <a href="tel:0964437451" class="footer-item-link"><span><b>0964 437 451</b></span></a> (8h00 - 20h00)
+                </p>
+              </li>
+            </ul>
+            <h3 class="footer__heading">Đối tác dịch vụ bảo hành</h3>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a href="#" class="footer-item-link">Điện thoại - Phụ kiện</a>
+                <a href="#"><img src="../image/doi-tac-bao-hanh.png" class="img-service"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid__column-3">
+            <ul class="footer-list">
+              <li>
+                <a href="" class="footer-item-link">Chính sách mua hàng</a>
+              </li>
+              <li>
+                <a href="" class="footer-item-link">Chính sách bảo hành</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Chính sách thanh toán</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Chính sách giao hàng</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Chính sách trả góp</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Chính sách đổi trả</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Cảnh báo giả mạo</a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="footer-item-link">Hướng dẫn mua hàng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__column-3">
+            <ul>
+              <li>
+                <a href="gioithieu.html" style="color: rgb(220, 70, 70)!important; font-size: 16px; ">
+                  Thông Tin Về Các Thành Viên Trong Nhóm
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="grid__row">
+          <div class="grid__column-4">
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Điện thoại</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone Se seris</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone 7 seris</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone 8 series</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone X series</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone 11 series</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone 12 series</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> iPhone 13 series</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> Điện thoai Apple</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> Điện thoại Xiaomi</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> Điện thoại Samsung</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> Điện thoại Oppo</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> Điện thoại Nokia</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href=""> Điện thoại Vivo</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__column-4">
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Máy tính Laptop</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Laptop Macbook</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Laptop Dell</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Laptop Lenovo</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Laptop HP</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Laptop Asus</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="#">Laptop Acer</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__column-4">
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Phụ kiện - Nhà thông minh</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Dây cáp</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Cốc sạc</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Tai nghe</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Chuột máy tính</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Máy in</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Bàn phím</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Camera</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Sạc dự phòng</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Balo, túi xách</a>
+              </li>
+              <li class="footer-item">
+                <a class="footer-item-link" href="">Đèn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="copyright-content">
+          <p class="copyright-text">© 2005 - 2023 Công ty TNHH Vina LNK. Giấy chứng nhận đăng ký kinh doanh do sở KH &
+            ĐT TPHCM cấp ngày 28/09/2020. Địa chỉ: 22/31A Đ. Số 8, Hiệp Bình Phước, Thủ Đức, Thành phố Hồ Chí Minh
+            700000</p>
+        </div>
+      </div>
+      <div class="img">
+        <a href=""><img src="../image/tải xuống.png" class="img-bocongthuong"></a>
+        <a href=""><img src="../image/_dmca_premi_badge_4.png" class="dmca"></a>
+      </div>
+    </footer>
+  </main>
+  <script></script>
+
+
+</body>
+<script>
+  // Lấy Dữ Liệu của Điện Thoại
+  function renderItem1(item) {
+    return `<div class="card1 list-item list-item_ip">
+                  <div class="image-product">
+                    <img src="${item.image}"
+                      alt="Card image" style="width:80%">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">${item.title}</h4>
+                    <div class="item-product-atributes" style="font-size: 12px; opacity: 0.8;">
+                      <i class="fa fa-microchip" aria-hidden="true"></i>${item.type}
+                      <i class="fa fa-mobile" aria-hidden="true"></i> ${item.cpu}
+                      <i class="fa fa-hdd-o" aria-hidden="true"></i> ${item.size}
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">${item.price}<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+                  </div>
+                </div>`
+  }
+  fetch('../Json/listDienThoaiTrangChu.json')
+    .then(response => response.json())
+    .then(item_product1 => {
+      localStorage.setItem('item_product1', JSON.stringify(item_product1));
+      const productList = document.querySelector(".content-box-list_ip");
+      const output = item_product1.map(item => {
+        console.log(item);
+        return renderItem1(item)
+      }
+      ).join('');
+      productList.innerHTML = output;
+    })
+  fetch('../Json/listDienThoaiTrangChu.json')
+    .then(response => response.json())
+    .then(item_product => {
+      localStorage.setItem('item_product', JSON.stringify(item_product));
+
+      // Lấy danh sách sản phẩm trên trang
+      const productList = document.querySelector(".content-box-list_ip");
+      const products = productList.querySelectorAll(".list-item_ip");
+      // Thêm event listener cho từng sản phẩm
+
+      products.forEach((product, index) => {
+        product.addEventListener("click", () => {
+          // Lấy thông tin sản phẩm được click
+          const selectedItem = item_product[index];
+          // Lưu thông tin sản phẩm vào local storage
+          localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
+          // Chuyển đến trang chi tiết sản phẩm
+          window.location.href = "../html/ThongTinSanPham.html";
+
+        });
+      });
+    });
+
+
+  // // Lấy Dữ Liệu của tai nghe 
+  function renderItem(item) {
+    return `
+    <div class="card list-item" style="border-radius: 1.25rem;">
+                  <div class="image-product" >
+                    <a href=""><img src="${item.image}"
+                      alt="Card image" style="width:80%"></a>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">${item.title}</h4>
+                    <div class="item-product-atributes">
+                      <p>Apple</p>
+                    </div>
+                    <div class="price price_general">
+                      <p style="color:red ;font-weight:bold;">${item.price}<sup>đ</sup></p>
+                      <p class="discount_price">${item.discount}<sup>đ</sup></p>
+                    </div>
+                    <div class="vote-strar" style="font-size:14px;color:rgba(92, 73, 73, 0.333);">
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                      <i class="fa fa-star star-normal"></i>
+                    </div>
+                    <div class="compare" style="color:red;font-size:15px;">
+                      <i class="fa icon-compare"></i><span>So sánh</span>
+                    </div>
+                    <div class="discount">
+                      <p>Giảm 18%</p>
+                    </div>
+                  </div>
+                </div>`
+  }
+  fetch('../Json/listTaiNgheTrangChu.json')
+    .then(response => response.json())
+    .then(item_product => {
+      localStorage.setItem('item_product', JSON.stringify(item_product));
+      const productList = document.querySelector(".content-box-list");
+      const output = item_product.map(item => {
+
+        return renderItem(item)
+      }
+      ).join('');
+      productList.innerHTML = output;
+    })
+  fetch('../Json/listTaiNgheTrangChu.json')
+    .then(response => response.json())
+    .then(item_product => {
+      localStorage.setItem('item_product', JSON.stringify(item_product));
+
+      // Lấy danh sách sản phẩm trên trang
+      const productList = document.querySelector(".content-box-list");
+      const products = productList.querySelectorAll(".list-item");
+      // Thêm event listener cho từng sản phẩm
+      products.forEach((product, index) => {
+        product.addEventListener("click", () => {
+          // Lấy thông tin sản phẩm được click
+          const selectedItem = item_product[index];
+
+          // Lưu thông tin sản phẩm vào local storage
+          localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
+          // Chuyển đến trang chi tiết sản phẩm
+          window.location.href = "../html/ThongTinSanPham.html";
+
+        });
+      });
+    });
+
+
+</script>
+<script src="../Js/js_TrangChu.js"></script>
+
+</html>

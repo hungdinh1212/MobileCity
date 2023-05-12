@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.box-product-phone {
+    width: 100%;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.title-product .title-name {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.product-phone-content {
+    background-image: url(https://vinalnk.com/assets/img/bg-phu-kien.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    display: flex;
+    border-radius: 18px;
+    min-height: 430px;
+    margin-top: 10px;
+}
+
+.banner-box {
+    float: left;
+    width: 20%;
+}
+
+.content-box {
+    width: 80%;
+    padding: 7px;
+}
+
+.content-box-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content-box-nav ul {
+    display: flex;
+    clear: both;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.content-box-nav li a {
+    float: left;
+    border-radius: 11px;
+    border: 1.5px solid #737373;
+    margin-right: 11px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.content-box-nav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.see-more {
+    float: right;
+    color: white;
+    font-size: 14px;
+    padding-right: 30px;
+}
+.content-box-list-container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.content-box-list {
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    transition: transform 1s ease-in-out;
+    display: flex;
+}
+
+.image-product {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+}
+.image-product img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-product img {
+    margin: auto;
+}
+
+.list-item {
+    width: 230px;
+    height: 345px;
+    margin-right: 2px;
+    float: left;
+    background: #fff;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    transform: translateX();
+}
+
+.card{
+    position: relative;
+    flex: 1 0 24.4%;
+}
+.card-body {
+    padding: 15px;
+    line-height: 21px;
+    
+}
+
+.item-product-atributes {
+    background: #F3F4F6;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    padding: 6px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.item-product-atributes ul {
+    display: flex;
+}
+
+.price_general {
+    display: flex;
+}
+
+.discount_price {
+    text-decoration: line-through;
+    margin: 2px 0px 0px 20px;
+    font-weight: bold;
+    font-size: 12px;
+    color: grey;
+}
+.discount{
+    position: absolute;
+    top: 0;
+    left: -4px;
+    background: #D80003;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 20px 100px 100px 0px;
+}
+
+.button {
+    top: 168px;
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    padding: 5px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.button-right {
+    right: -50px;
+}
+
+.button-left {
+    left: -50px;
+}
+
+.content-box-list-container:hover .button-left{
+    transform: translateX(45px);
+    animation: showButtonLeft 1.5s ease-in-out ;
+    opacity: 0.6;
+}
+.content-box-list-container:hover .button-right {
+    transform: translateX(-50px);
+    animation: showButtonRight 1.5s ease-in-out ;
+    opacity: 0.6;
+}
+
+@keyframes showButtonLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.6;
+        transform: translateX(45px);
+    }
+}
+
+@keyframes showButtonRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.6;
+        transform: translateX(-50px);
+    }
+}

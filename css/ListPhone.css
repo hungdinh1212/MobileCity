@@ -1,0 +1,375 @@
+/* Css header */
+.menutren {
+    height: 50px !important;
+}
+
+.bg-header-color {
+    background-color: #d80003;
+}
+
+.container span a {
+    text-decoration: none;
+    color: #e3e7ed;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.con_header_item {
+    margin: 0px 40px 0px;
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+.box-product-phone {
+    width: 100%;
+}
+
+.title-product .title-name {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.con_header_item {
+    display: flex;
+}
+
+.con_header_item i {
+    font-size: 25px;
+}
+
+.con_header_item a {
+    font-size: 14px !important;
+}
+/* Css cho page danh sách điện thoại*/
+.breadcrumbs-block {
+    display: flex;
+    padding: 10px;
+}
+
+.breadcrumbs-block li {
+    display: inline-block;
+}
+
+.breadcrumbs-block a {
+    color: #737373;
+    text-decoration: none;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+.banner-phone {
+    margin: auto;
+}
+.banner-phone>.container {
+    display: flex;
+    gap: 2px;
+
+}
+.carousel {
+    width: 600px;
+}
+
+.brand-phone-content ul {
+    width: 100%;
+}
+
+.brand-phone-content ul li {
+    display: inline-block;
+    padding: 4px;
+    text-align: left;
+    border: 1px solid rgb(193, 180, 180);
+    border-radius: 5px;
+    margin-left: 3px;
+    background-color: none !important;
+    cursor: pointer;
+}
+
+.brand-phone-content ul li a img {
+    width: 120px;
+}
+
+.need-cate-content {
+    display: flex;
+    gap: 8px;
+}
+
+.choose-list {
+    height: 120px;
+    width: 120px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    padding-top: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    position: relative;
+}
+
+.need-cate-content img {
+    width: 60px;
+    height: 65px;
+    position: absolute;
+    top: 46%;
+    left: 24%;
+}
+
+/* Lọc theo tiêu chí */
+.filter-phone-content {
+    display: flex;
+    gap: 5px;
+}
+
+.item-filter-phone {
+    display: inline-block;
+    position: relative;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 11px;
+    background: #F3F4F6;
+    border: 1px solid #E6E8EC;
+    padding: 9px;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.6s;
+    color: #444;
+}
+
+.item-filter-phone:hover {
+    border: 1px solid red;
+    background-color: rgb(253, 253, 253);
+}
+/* Sắp xếp */
+.sort-phone-content {
+    display: flex;
+    gap: 5px;
+}
+
+/* Danh sách điện thoại*/
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.item_product {
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    width: 231px;
+    transition: tranform 2s ease-out;
+
+}
+.product_img {
+    padding: 15px;
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.item_product:hover img {
+    transform: translateY(-10px);
+}
+
+.product_img img {
+    width: 165px;
+    height: 161px;
+}
+
+.product_info {
+    padding: 15px;
+}
+
+
+.product_info .name_product {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #444444;
+    height: 42px;
+    overflow: hidden;
+    margin-bottom:5px;
+}
+
+.product_attribute {
+    background: #F3F4F6;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    padding: 14px;
+    position: relative;
+
+}
+
+.product_attribute ul {
+    list-style: none;
+    position: absolute;
+    left: -14%;
+    top: 10%;
+}
+
+.product_attribute>ul>li {
+    display: inline;
+    float: left;
+    color: #444444;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 3px 0;
+    margin-right: 6px;
+    position: relative;
+    cursor: pointer;
+    font-family: SF-display, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif !important;
+}
+
+.product_price .price {
+    margin-bottom: 3px;
+    color: #D80003;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 7px;
+
+}
+
+/* .product_vote{
+    /* margin-top: 7px; */
+
+.product_vote .star-normal {
+    font-size: 14px;
+
+}
+
+.star-normal {
+    color: #707070;
+}
+
+
+.product_compare span {
+    position: relative;
+    color: #D80003;
+    font-size: 12px;
+}
+.fa-circle-plus{
+    color:red;
+    font-size:12px;
+}
+
+
+
+.footer {
+    box-shadow: #737373;
+    margin-top: 40px;
+    border-top: 1px solid rgb(213, 209, 209);
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer__heading {
+    font-size: 1.1rem;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item-link {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #666 !important;
+    line-height: 1.2;
+}
+
+.footer-left {
+    width: 70%;
+}
+
+h3 {
+    font-size: 5px;
+    margin-bottom: -10px;
+}
+
+/* Sử dụng grid 12 cột*/
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+
+}
+
+.grid__column-3 {
+    padding-left: 0px;
+    padding-right: 20px;
+    width: 22%;
+}
+
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 20px;
+    margin-left: 50px;
+    width: 30%;
+}
+
+/*  */
+.grid__column-4 ul li {
+    float: left;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/* Xử lý ảnh bên thanh toán*/
+.width__img {
+    width: 65px;
+    float: left;
+}
+
+.img-bocongthuong {
+    width: 120px;
+    height: 45px;
+    margin-top: -10px;
+    margin-bottom: -9px;
+}
+
+.img-dmca {
+    margin-top: -30px;
+}
+
+/* Ảnh đỏ */
+.img-service {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+div .img {
+
+    float: left;
+}
+
+/* Số điện thoạt */
+
+.copyright {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 50px;
+    color: #666;
+}
+
+.grid__column-3 {
+    margin: 0% 0% 1% 6%;
+}

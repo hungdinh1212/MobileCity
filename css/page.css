@@ -1,0 +1,544 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.menutren {
+    height: 50px !important;
+}
+
+.bg-header-color {
+    background-color: #d80003;
+}
+
+.container span a {
+    text-decoration: none;
+    color: #e3e7ed;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.con_header_item {
+    margin: 0px 40px 0px;
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+.box-product-phone {
+    width: 100%;
+}
+
+.title-product .title-name {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.product-phone-content {
+    background-image: url(https://vinalnk.com/assets/img/bg-product.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    display: flex;
+    border-radius: 18px;
+    min-height: 430px;
+    margin-top: 10px;
+}
+
+.banner-box {
+    float: left;
+    width: 20%;
+}
+
+.content-box {
+    width: 80%;
+    padding: 7px;
+}
+
+.content-box-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content-box-nav ul {
+    display: flex;
+    clear: both;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.content-box-nav li a {
+    float: left;
+    border-radius: 11px;
+    border: 1.5px solid #737373;
+    margin-right: 11px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.content-box-nav li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.see-more {
+    float: right;
+    color: white;
+    font-size: 14px;
+    padding-right: 30px;
+}
+
+.content-box-list {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    position: relative;
+}
+
+.image-product {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-product img {
+    margin: auto;
+}
+
+.list-item {
+    width: 230px;
+    height: 345px;
+    margin-right: 2px;
+    float: left;
+    background: #fff;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.card-body {
+    padding: 15px;
+    line-height: 21px;
+}
+
+.item-product-atributes {
+    background: #F3F4F6;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    padding: 6px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+.item-product-atributes ul {
+    display: flex;
+}
+
+.item-product {
+    position: relative;
+}
+
+/* Css cho page điện thoại */
+
+
+.breadcrumbs-block {
+    display: flex;
+    padding: 10px;
+}
+
+.breadcrumbs-block li {
+    display: inline-block;
+}
+
+.breadcrumbs-block a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.banner-phone {
+    margin: auto;
+}
+
+.banner-phone>.container {
+    display: flex;
+    gap: 2px;
+
+}
+
+.container_cate a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #ffffff;
+    overflow: hidden;
+    margin: 10px 0px 0px 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.container_cate img {
+    transition: all 0.6s;
+    height: 105px;
+    width: 100%;
+    margin: 6px -35px 5px 12px;
+}
+
+.container_cate img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.carousel {
+    width: 600px;
+}
+
+.brand-phone-content ul {
+    width: 100%;
+}
+
+.brand-phone-content ul li {
+    display: inline-block;
+    padding: 4px;
+    text-align: left;
+    border: 1px solid rgb(193, 180, 180);
+    border-radius: 5px;
+    margin-left: 3px;
+}
+
+.brand-phone-content ul li a img {
+    width: 120px;
+}
+
+.need-cate-content {
+    display: flex;
+    gap: 8px;
+}
+
+.choose-list {
+    height: 120px;
+    width: 120px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    padding-top: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    position: relative;
+}
+
+.need-cate-content img {
+    width: 60px;
+    height: 65px;
+    position: absolute;
+    top: 46%;
+    left: 24%;
+}
+
+/* Lọc theo tiêu chí */
+.filter-phone-content {
+    display: flex;
+    gap: 5px;
+}
+
+.item-filter-phone {
+    display: inline-block;
+    position: relative;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 11px;
+    background: #F3F4F6;
+    border: 1px solid #E6E8EC;
+    padding: 9px;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.6s;
+    color: #444;
+}
+
+.item-filter-phone:hover {
+    border: 1px solid red;
+    background-color: rgb(253, 253, 253);
+}
+
+.sort-phone-content {
+    display: flex;
+    gap: 5px;
+}
+
+/* Danh sách product */
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.product_img {
+    padding: 15px;
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.item_product {
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+
+}
+
+.product_img img {
+    width: 165px;
+    height: 161px;
+}
+
+.product_info {
+    padding: 15px;
+}
+
+
+.product_info .name_product {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #444444;
+    height: 42px;
+    overflow: hidden;
+    margin-bottom: 0px !important;
+}
+
+.product_attribute {
+    background: #F3F4F6;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    padding: 14px;
+    position: relative;
+
+}
+
+.product_attribute ul {
+    list-style: none;
+    position: absolute;
+    left: -12%;
+    top: 10%;
+}
+
+.product_attribute>ul>li {
+    display: inline;
+    float: left;
+    color: #444444;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 3px 0;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    font-family: SF-display, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif !important;
+}
+
+.product_price .price {
+    margin-bottom: 3px;
+    color: #D80003;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 7px;
+
+}
+
+.product_img:hover img{
+    transform: scale(1.1);
+    transition: all 0.8s ease-in-out;
+}
+
+.product_vote .star-normal {
+    font-size: 14px;
+
+}
+
+.star-normal {
+    color: #707070;
+}
+
+
+.product_compare span {
+    position: relative;
+    top: -2px;
+    color: #D80003;
+    font-size: 12px;
+}
+
+.product_price {
+    position: relative;
+}
+
+.discount_price {
+    text-decoration: line-through;
+    margin: 2px 0px 0px 20px;
+    font-weight: bold;
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    margin-left: 100px;
+    top: -1px;
+}
+
+/* css cho ngôi sao */
+.star-gold {
+    color: #F59E0B;
+}
+
+.information_item {
+    text-align: center;
+}
+
+.row_information {
+    height: 55px;
+    width: 55px;
+}
+
+.box_item .active {
+    border: 1px solid #D80003;
+    color: #D80003;
+    width: calc((100% - 20px)/3);
+    float: left;
+    margin-top: 10px;
+    border: 1px solid #CCD0D7;
+    border-radius: 11px;
+    padding: 8px 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+/* footer */
+/* Thuộc tính chung cho footer */
+.footer {
+    box-shadow: #737373;
+    margin-top: 40px;
+    border-top: 1px solid rgb(213, 209, 209);
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer__heading {
+    font-size: 1.1rem;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item-link {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #666 !important;
+    line-height: 1.2;
+}
+
+.footer-left {
+    width: 70%;
+}
+
+h3 {
+    font-size: 5px;
+    margin-bottom: -10px;
+}
+
+/* Sử dụng grid 12 cột*/
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-3 {
+    padding-left: 0px;
+    padding-right: 20px;
+    width: 22%;
+}
+
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 20px;
+    margin-left: 10px;
+    width: 30%;
+}
+
+/*  */
+.grid__column-4 ul li {
+    float: left;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+/* Xử lý ảnh bên thanh toán*/
+.width__img {
+    width: 65px;
+    float: left;
+}
+
+.img-bocongthuong {
+    width: 120px;
+    height: 45px;
+    margin-top: -10px;
+    margin-bottom: -9px;
+}
+
+.img-dmca {
+    margin-top: -30px;
+}
+
+/* Ảnh đỏ */
+.img-service {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+div.img {
+    margin-left: 500px;
+    float: left;
+}
+
+/* Số điện thoạt */
+span:hover {
+    color: red;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 50px;
+    color: #666;
+}
+
+.grid__column-3 {
+    margin-right: 2%;
+}
